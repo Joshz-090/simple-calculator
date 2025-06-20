@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <i class="fas fa-calculator"></i>
+      </div>
+      <div>
+        <h1>Simple Calculator</h1>
+        <p>Perform basic arithmetic operations</p>
+      </div>
+      <div class="theme-toggle">
+        <i class="fas fa-moon dark-icon"></i>
+        <i class="fas fa-sun light-icon"></i>
+      </div>
+    </header>
+    <main>
+      <div class="calculator">
+        <input type="text" id="display" disabled />
+        <div class="buttons">
+          <button class="btn onandC" onclick="togglePower()">On</button>
+          <button class="btn onandC" onclick="clearDisplay()">C</button>
+          <button class="btn" onclick="appendToDisplay('7')">7</button>
+          <button class="btn" onclick="appendToDisplay('8')">8</button>
+          <button class="btn" onclick="appendToDisplay('9')">9</button>
+          <button class="btn operator" onclick="appendToDisplay('/')">/</button>
+          <button class="btn" onclick="appendToDisplay('4')">4</button>
+          <button class="btn" onclick="appendToDisplay('5')">5</button>
+          <button class="btn" onclick="appendToDisplay('6')">6</button>
+          <button class="btn operator" onclick="appendToDisplay('*')">*</button>
+          <button class="btn" onclick="appendToDisplay('1')">1</button>
+          <button class="btn" onclick="appendToDisplay('2')">2</button>
+          <button class="btn" onclick="appendToDisplay('3')">3</button>
+          <button class="btn operator" onclick="appendToDisplay('-')">-</button>
+          <button class="btn zero" onclick="appendToDisplay('0')">0</button>
+          <button class="btn operator" onclick="calculateResult()">=</button>
+          <button class="btn operator" onclick="appendToDisplay('+')">+</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>© 2023 Simple Calculator</p>
+      <p>Created by <a href="https://github.com/joshz-090">Joshz-090</a></p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

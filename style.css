@@ -1,0 +1,286 @@
+/* Default (light) theme */
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #333;
+  --btn-color: #f0f0f0;
+  --btn-text: #333;
+  --operator-color: #ff9500;
+  --calculator-bg: #fff;
+  --display-text: #222;
+  --display-bg: #f8f8f8;
+  --btn-hover: #e0e0e0;
+  --btn-active: #d0d0d0;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+}
+
+/* Dark theme */
+body.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #f0f0f0;
+  --btn-color: #333;
+  --btn-text: #fff;
+  --operator-color: #ff7043;
+  --calculator-bg: #252525;
+  --display-text: #f0f0f0;
+  --display-bg: #2d2d2d;
+  --btn-hover: #444;
+  --btn-active: #555;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+  gap: 1rem;
+}
+
+header > div {
+  flex: 1;
+}
+
+header > div:first-child,
+header > div:last-child {
+  flex: 0;
+}
+
+/* Theme toggle styles */
+.theme-toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle i {
+  font-size: 1.5rem;
+  position: absolute;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle .dark-icon {
+  color: var(--text-color);
+}
+
+.theme-toggle .light-icon {
+  color: var(--operator-color);
+}
+
+body:not(.dark) .light-icon {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+body.dark .dark-icon {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.theme-toggle:hover i {
+  transform: scale(1.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 60px;
+}
+
+.logo i {
+  font-size: 1.8rem;
+  color: var(--operator-color);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+header p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.calculator {
+  background-color: var(--calculator-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  max-width: 320px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#display {
+  width: 100%;
+  height: 70px;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  text-align: right;
+  background: var(--display-bg);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: calc(var(--border-radius) - 5px);
+  color: var(--display-text);
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  border: none;
+  background-color: var(--btn-color);
+  color: var(--btn-text);
+  border-radius: calc(var(--border-radius) - 5px);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  background-color: var(--btn-active);
+  transform: translateY(0);
+}
+
+.operator {
+  background-color: var(--operator-color);
+  color: white;
+  font-weight: 600;
+}
+
+.operator:hover {
+  background-color: color-mix(in srgb, var(--operator-color), black 15%);
+}
+
+.operator:active {
+  background-color: color-mix(in srgb, var(--operator-color), black 25%);
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.onandC {
+  grid-column: span 2;
+  background-color: var(--text-color);
+  color: var(--calculator-bg);
+  font-weight: 600;
+}
+
+.onandC:hover {
+  background-color: color-mix(in srgb, var(--text-color), white 20%);
+}
+
+.onandC:active {
+  background-color: color-mix(in srgb, var(--text-color), white 40%);
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.8;
+  width: 100%;
+  max-width: 600px;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  color: var(--operator-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+footer a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .calculator {
+    padding: 1.25rem;
+  }
+
+  .btn {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+  }
+
+  #display {
+    height: 60px;
+    font-size: 1.8rem;
+  }
+}
+
+/* Animation for button press */
+@keyframes buttonPress {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn:active {
+  animation: buttonPress 0.2s ease;
+}
