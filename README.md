@@ -1,8 +1,3 @@
-make the followinf readme best and profetional 
-
-
-
-
 # 🧮 Simple Calculator
 
 A sleek and interactive calculator built with **HTML**, **CSS**, and **JavaScript**. This web app allows users to perform basic arithmetic operations with a smooth user interface, light/dark theme support, and full keyboard integration.
