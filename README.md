@@ -14,7 +14,7 @@ A sleek and interactive calculator built with **HTML**, **CSS**, and **JavaScrip
 - 🎯 On/Off functionality
 - 🖱️ Fully interactive UI with buttons
 - ⌨️ Full keyboard support
-- ⚠️ Error handling (e.g., division by zero)
+- ⚠️ Error handling (e.g., division by zero) 
 - 🧠 Intelligent input management
 - 🎨 Clean and responsive design
 
