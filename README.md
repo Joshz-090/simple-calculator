@@ -20,7 +20,7 @@ A sleek and interactive calculator built with **HTML**, **CSS**, and **JavaScrip
 
 ---
 
-## 📸 Screenshots
+## 📸 Screenshots 
 
 ### ☀️ Light Mode
 ![Light Mode](./screenshots/light-mode.png)
